@@ -1,10 +1,12 @@
 package com.ecommerce.order_service.client;
 
 import com.ecommerce.order_service.dto.response.ProductResponseDto;
+import com.ecommerce.order_service.dto.response.UserResponseDto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,8 +23,8 @@ public interface ProductServiceClient {
     @CircuitBreaker(name = "findProductByIdCircuitBreaker", fallbackMethod = "findProductByIdFallback")
     ResponseEntity<ProductResponseDto> findById(@PathVariable Long id);
 
-    default ResponseEntity<String> findProductByIdFallback(Long id, Exception exception){
-        logger.info("Produt not found by id " + id);
-        return ResponseEntity.ok(id + " product not found!");
+    default ResponseEntity<ProductResponseDto> findProductByIdFallback(Long id, Exception exception){
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)
+                .body(new ProductResponseDto());
     }
 }

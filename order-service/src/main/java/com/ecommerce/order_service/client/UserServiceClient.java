@@ -5,6 +5,7 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,8 +22,8 @@ public interface UserServiceClient {
     @CircuitBreaker(name = "findUserByIdCircuitBreaker", fallbackMethod = "findUserByIdFallback")
     ResponseEntity<UserResponseDto> findById(@PathVariable Long id);
 
-    default ResponseEntity<String> findUserByIdFallback(Long id, Exception exception){
-        logger.info("Note not found by id " + id);
-        return ResponseEntity.ok(id + " user not found!");
+    default ResponseEntity<UserResponseDto> findUserByIdFallback(Long id, Exception exception){
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)
+                .body(new UserResponseDto());
     }
 }
