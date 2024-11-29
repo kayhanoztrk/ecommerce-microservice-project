@@ -1,0 +1,7 @@
+
+o
+java:S6204?"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(œçÖß8×òˆ¾·2
+{
+java:S1488/"eImmediately return this expression instead of assigning it to the temporary variable "orderResponse".(²Ÿè¬
+
+java:S1488M"eImmediately return this expression instead of assigning it to the temporary variable "orderResponse".(†öÕ:8†³²½·2
