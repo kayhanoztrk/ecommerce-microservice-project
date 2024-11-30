@@ -57,11 +57,5 @@ Qorder-service/src/main/java/com/ecommerce/order_service/service/OrderService.ja
 Zorder-service/src/main/java/com/ecommerce/order_service/dto/response/OrderResponseDto.java,5/8/58e8fa8679bc5b47d80ac9c0305944778594e94e
 x
 Horder-service/src/main/java/com/ecommerce/order_service/model/Order.java,0/2/022dd5b2e95c6ce5076c0dda0118bf5d10a0b546
-„
-Torder-service/src/main/java/com/ecommerce/order_service/OrderServiceApplication.java,d/f/df95454750337ef91db26ae50a5f8b9bf7fb221a
 
 Oorder-service/src/main/java/com/ecommerce/order_service/mapper/OrderMapper.java,8/b/8b60a5519af00da33702871b6b78a2a1428e2431
-Š
-Zorder-service/src/main/java/com/ecommerce/order_service/service/impl/OrderServiceImpl.java,d/f/df7701559390ce3c52af531d393f28e645e68428
-‡
-Worder-service/src/main/java/com/ecommerce/order_service/controller/OrderController.java,8/c/8cb86a2212e5546777bdddc7b9e99c12ccb8fae9

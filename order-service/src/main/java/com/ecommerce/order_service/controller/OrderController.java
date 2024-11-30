@@ -3,6 +3,8 @@ package com.ecommerce.order_service.controller;
 import com.ecommerce.order_service.dto.request.OrderCreateRequest;
 import com.ecommerce.order_service.dto.response.OrderResponseDto;
 import com.ecommerce.order_service.service.OrderService;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +27,8 @@ public class OrderController {
     }
 
     @GetMapping
+    //@TimeLimiter(name = "orderServiceLimiter")
+    @RateLimiter(name = "orderServiceLimiter")
     public ResponseEntity<List<OrderResponseDto>> findAllOrderList(){
         List<OrderResponseDto> orderResponseDtoList = orderService.findAll();
         return new ResponseEntity<>(orderResponseDtoList, HttpStatus.OK);

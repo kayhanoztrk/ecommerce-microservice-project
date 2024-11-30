@@ -2,6 +2,7 @@ package com.ecommerce.order_service.client;
 
 import com.ecommerce.order_service.dto.response.UserResponseDto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
