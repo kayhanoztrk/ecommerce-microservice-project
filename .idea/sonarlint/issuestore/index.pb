@@ -45,17 +45,7 @@ Wuser-service/src/main/java/com/ecommerce/user_service/service/impl/UserServiceI
 Tuser-service/src/main/java/com/ecommerce/user_service/controller/UserController.java,3/6/36129779d38a78f4778cb6840a3537f9344b3cdc
 á
 Wuser-service/src/main/java/com/ecommerce/user_service/dto/response/UserResponseDto.java,2/f/2f10b712b7169aea6ab27e326395b8f09e5986a1
-â
-Yorder-service/src/main/java/com/ecommerce/order_service/dto/response/UserResponseDto.java,d/e/defca84b6f5955b249d9ba2417d7b3638bf15672
 ê
 `product-service/src/main/java/com/ecommerce/product_service/dto/response/ProductResponseDto.java,a/8/a8371f14db4cfd0abbbe6a5b59cdc7d1c2a02132
-å
-\order-service/src/main/java/com/ecommerce/order_service/dto/response/ProductResponseDto.java,2/d/2d07f4f808376414b6a72c59082718c290e639f0
-Å
-Qorder-service/src/main/java/com/ecommerce/order_service/service/OrderService.java,6/8/682fb64288053c4af384903f6f9abf0a1c79d08c
-ä
-Zorder-service/src/main/java/com/ecommerce/order_service/dto/response/OrderResponseDto.java,5/8/58e8fa8679bc5b47d80ac9c0305944778594e94e
-x
-Horder-service/src/main/java/com/ecommerce/order_service/model/Order.java,0/2/022dd5b2e95c6ce5076c0dda0118bf5d10a0b546
 
 Oorder-service/src/main/java/com/ecommerce/order_service/mapper/OrderMapper.java,8/b/8b60a5519af00da33702871b6b78a2a1428e2431
